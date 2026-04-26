@@ -57,3 +57,12 @@
 - Shows compact commit history (one line per commit)
 - Example:
   git log --oneline
+
+---
+
+## Undo / Restore
+
+### git restore
+- Discards changes in the working directory
+- Example:
+  git restore git-commands.md
