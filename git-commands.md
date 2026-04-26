@@ -52,3 +52,8 @@
 - Shows changes between working directory and staging area
 - Example:
   git diff
+
+### git log --oneline
+- Shows compact commit history (one line per commit)
+- Example:
+  git log --oneline
