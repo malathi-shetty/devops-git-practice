@@ -1,5 +1,7 @@
 # Git Commands Reference
 
+Note: Updated from GitHub UI for Day 22 task
+
 ## Setup & Config
 
 ### git config
