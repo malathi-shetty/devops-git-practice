@@ -7,8 +7,8 @@ Note: Updated from GitHub UI for Day 22 task
 ### git config
 - Sets user configuration like name and email
 - Example:
-  git config --global user.name "Your Name"
-  git config --global user.email "your@email.com"
+  - git config --global user.name "Your Name"
+  - git config --global user.email "your@email.com"
 
 ### git config --list
 - Displays all Git configuration values
