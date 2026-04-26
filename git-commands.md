@@ -1,6 +1,6 @@
 # Git Commands Reference
 
-Note: Updated from GitHub UI for Day 22 task
+Note: Updated from GitHub CLI for Day 22 task
 
 ## Setup & Config
 
@@ -71,30 +71,31 @@ Note: Updated from GitHub UI for Day 22 task
   
 ---
 
+Note: Updated from GitHub UI for Day 23 task
+
 ## Branching Commands
 
-### git branch
+### `git branch`
 - Lists all local branches
 - Example:
   git branch
 
-
-### git branch -a
+### `git branch -a`
 - Lists all branches (local + remote)
 - Example:
   git branch -a
 
-### git branch -r
+### `git branch -r`
 - Lists only remote branches
 - Example:
   git branch -r
-  
-### git branch --show-current
+
+### `git branch --show-current`
 - Shows only the current branch name
 - Example:
   git branch --show-current
 
-### git branch <branch-name>
+### `git branch <branch-name>`
 - Creates a new branch
 - Example:
   git branch feature-1
@@ -163,12 +164,12 @@ Note: Updated from GitHub UI for Day 22 task
 - Example:
   git log --oneline
 
-### git log --oneline --decorate --graph
+### `git log --oneline --decorate --graph`
 - Shows commit graph with branch pointers
 - Example:
   git log --oneline --decorate --graph
 
-### git log <branch1>..<branch2>
+### `git log <branch1>..<branch2>`
 - Shows commits present in second branch but not in first
 - Example:
   git log master..feature-1
@@ -187,12 +188,12 @@ Note: Updated from GitHub UI for Day 22 task
 - Example:
   git remote -v
 
-### git push origin <branch-name>
+### `git push origin <branch-name>`
 - Pushes a branch to GitHub
 - Example:
   git push origin feature-1
 
-### git push -u origin <branch-name>
+### `git push -u origin <branch-name>`
 - Pushes branch and sets upstream tracking
 - Example:
   git push -u origin feature-1
@@ -201,7 +202,7 @@ Note: Updated from GitHub UI for Day 22 task
 
 ## Pull & Fetch
 
-### git pull origin <branch-name>
+### `git pull origin <branch-name>`
 - Fetches and merges changes from remote
 - Example:
   git pull origin master
