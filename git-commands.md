@@ -47,3 +47,8 @@
 - Shows full commit history (hash, author, date, message)
 - Example:
   git log
+
+### git diff
+- Shows changes between working directory and staging area
+- Example:
+  git diff
