@@ -274,3 +274,128 @@ Note: Updated from GitHub UI for Day 23 task
 
 - git switch is the modern alternative to git checkout  
 - git checkout is older and does multiple things (switch + restore files)  
+
+
+
+---
+
+Note: Updated from CLI for Day 24 task
+
+
+# Git Commands – Day 24 (Advanced Git)
+
+---
+
+##  Merge
+
+### Explanation
+Merge combines changes from one branch into the current branch. It preserves history.
+
+### Command
+git merge <branch-name>
+
+### Example
+git switch main  
+git merge feature-login
+
+### Fast-forward vs Merge commit
+- Fast-forward: no new commit, pointer moves forward  
+- Merge commit: new commit created when branches diverge  
+
+---
+
+##  Rebase
+
+### Explanation
+Rebase moves commits onto another branch to create linear history.
+
+### Command
+git rebase <branch-name>
+
+### Example
+git switch feature-dashboard  
+git rebase main
+
+### Continue / Abort
+git rebase --continue  
+git rebase --abort  
+
+---
+
+##  Squash Merge
+
+### Explanation
+Combines multiple commits into one single commit.
+
+### Command
+git merge --squash <branch-name>  
+git commit -m "Squash merged feature"
+
+---
+
+##  Stash
+
+### Explanation
+Temporarily saves uncommitted work.
+
+### Commands
+git stash  
+git stash -u  
+
+### List stash
+git stash list  
+
+### Apply stash
+git stash apply stash@{n}  
+
+### Pop stash
+git stash pop  
+
+### Drop stash
+git stash drop stash@{n}  
+
+---
+
+##  Cherry Pick
+
+### Explanation
+Applies a specific commit from another branch.
+
+### Command
+git cherry-pick <commit-hash>
+
+### Example
+git switch main  
+git cherry-pick abc1234  
+
+### Continue / Abort
+git cherry-pick --continue  
+git cherry-pick --abort  
+
+---
+
+##  Logs
+
+git log  
+git log --oneline --graph --all  
+git log --oneline --graph --decorate --all  
+
+---
+
+##  Conflicts
+
+git status  
+# fix file manually  
+git add .  
+git commit -m "Resolve conflict"
+
+---
+
+##  Quick Reference
+
+Create branch → git checkout -b <name>  
+Switch branch → git switch <name>  
+Merge → git merge <branch>  
+Rebase → git rebase <branch>  
+Stash → git stash  
+Cherry-pick → git cherry-pick <hash>  
