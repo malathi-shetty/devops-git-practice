@@ -1,6 +1,6 @@
 # Git Commands Reference
 
-Note: Updated from GitHub CLI for Day 22 task
+# Note: Updated from  CLI for Day 22 task
 
 ## Setup & Config
 
@@ -71,7 +71,7 @@ Note: Updated from GitHub CLI for Day 22 task
   
 ---
 
-Note: Updated from GitHub UI for Day 23 task
+# Note: Updated from GitHub UI for Day 23 task
 
 ## Branching Commands
 
@@ -399,3 +399,124 @@ Merge → git merge <branch>
 Rebase → git rebase <branch>  
 Stash → git stash  
 Cherry-pick → git cherry-pick <hash>  
+
+---
+
+# Git Commands – Day 25 (Reset & Revert)
+
+## Reset
+**Explanation**
+
+Resets the current branch to a previous commit. Can modify commit history depending on the mode.
+
+`git reset --soft`
+- Moves HEAD to previous commit
+- Keeps changes staged
+
+**Command**
+```bash
+git reset --soft HEAD~1
+```
+---
+
+**git reset --mixed (default)**
+- Moves HEAD to previous commit
+- Unstages changes (keeps them in working directory)
+
+---
+
+**Command**
+```bash
+git reset --mixed HEAD~1
+```
+
+---
+
+**`git reset --hard`**
+- Moves HEAD to previous commit
+- Deletes changes from staging and working directory
+- Destructive operation
+
+**Command**
+```bash
+git reset --hard HEAD~1
+```
+---
+
+**Reset to specific commit**
+```bash
+git reset --hard <commit-hash>
+```
+---
+
+**Important Note**
+- git reset rewrites history
+- Avoid using on pushed/shared branches
+- Safe for local cleanup only
+
+---
+
+### Revert
+**Explanation**
+
+Creates a new commit that undoes changes from a previous commit without removing history.
+
+**Command**
+```bash
+git revert <commit-hash>
+```
+---
+
+**Example**
+```bash
+git revert abc1234
+```
+---
+
+**Behavior**
+- Does NOT delete commit
+- Adds a new commit like:
+`"Revert 'Commit message'"`
+
+---
+
+**Conflict Handling**
+```bash
+git status
+# fix conflicts manually
+git add .
+git commit
+```
+---
+
+**Important Note**
+- Safe for shared branches
+- Does NOT rewrite history
+
+---
+
+**Reset vs Revert (Quick Reference)**
+|                          | git reset     | git revert          |
+| ------------------------ | ------------- | ------------------- |
+| History                  | Rewritten     | Preserved           |
+| Commit removed           | Yes           | No                  |
+| Safe for shared branches | No            | Yes                 |
+| Use case                 | Local cleanup | Undo in shared repo |
+
+
+---
+
+**`git reflog`**
+- Shows all recent Git actions (even after reset)
+```bash
+git reflog
+```
+**Restore lost commit**
+```bash
+git reset --hard <commit-id>
+```
+#### Notes
+- reset = rewrite history
+- revert = safe undo
+- --hard is destructive
+- Always avoid reset after push (unless force push is intended)
