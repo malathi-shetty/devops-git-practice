@@ -520,3 +520,80 @@ git reset --hard <commit-id>
 - revert = safe undo
 - --hard is destructive
 - Always avoid reset after push (unless force push is intended)
+
+--------------------
+
+# Note: Updated for Day 26 task
+
+> These commands are part of my DevOps learning journey and can be used for automating GitHub workflows using CLI.
+
+---
+
+## GitHub CLI (gh)
+
+### Explanation
+GitHub CLI allows you to manage repositories, issues, pull requests, and workflows directly from the terminal.
+
+---
+
+##  Authentication
+```bash
+gh auth login
+gh auth status
+gh auth refresh -h github.com -s delete_repo
+```
+##  Check Status
+```bash
+gh auth status
+```
+
+**Notes**
+- Supports browser login and PAT
+- Required before using gh commands
+
+ **Repository Management**
+- **Create Repo:** `gh repo create`
+- **Clone Repo:** `gh repo clone owner/repo`
+- **View Repo:** `gh repo view owner/repo`
+- **Open in Browser:** `gh repo view owner/repo --web`
+- **List Repos:** `gh repo list`
+- **Delete Repo:** `gh repo delete owner/repo`
+
+ **Issues**
+- **Create Issue:** `gh issue create --repo owner/repo`
+- **List Issues:** `gh issue list --repo owner/repo`
+- **View Issue:** `gh issue view <issue-number> --repo owner/repo`
+- **Comment on Issue:** `gh issue comment <issue-number> --body "message" --repo owner/repo`
+- **Close Issue:** `gh issue close <issue-number> --comment "resolved" --repo owner/repo`
+
+ **Pull Requests**
+- **Create PR:** `gh pr create`
+- **List PRs:** `gh pr list`
+- **View PR:** `gh pr view <pr-number>`
+- **View PR Details (JSON):** `gh pr view <pr-number> --json state,reviewRequests,statusCheckRollup`
+- **Merge PR:** 
+  - `gh pr merge <pr-number> --merge`
+  - `gh pr merge <pr-number> --squash`
+  - `gh pr merge <pr-number> --rebase`
+
+ **PR Review**
+- **Checkout PR:** `gh pr checkout <pr-number>`
+- **Approve PR:** `gh pr review <pr-number> --approve`
+- **Comment on PR:** `gh pr review <pr-number> --comment --body "Looks good"`
+- **Request Changes:** `gh pr review <pr-number> --request-changes`
+
+**GitHub Actions**
+- **List Workflow Runs:** `gh run list --repo owner/repo`
+- **View Workflow Run:** `gh run view <run-id> --repo owner/repo` 
+- **Watch Workflow:** `gh run watch `<run-id>` —repo owner / repo` 
+
+**Notes:**
+- gh reduces dependency on GitHub UI
+- Useful for automation and CI/CD pipelines
+- Supports JSON output for scripting
+  
+##  Useful Tricks
+
+- gh repo view --web
+- gh pr create --fill
+- gh issue list --state closed --repo owner/repo
