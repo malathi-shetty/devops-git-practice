@@ -1,5 +1,5 @@
-1. What is Software (Start from Zero)
-========================================
+# 1. What is Software (Start from Zero)
+
 
 **Concept (Short):**\
 Software is just something built to solve a problem for users.
@@ -12,8 +12,8 @@ Behind every app = code written by developers
 
 * * * * *
 
-2. What is SDLC (Software Development Life Cycle)
-====================================================
+# 2. What is SDLC (Software Development Life Cycle)
+
 
 **Concept (Short):**\
 SDLC is the step-by-step process used to build software.
@@ -35,8 +35,8 @@ You want to build a food app:
 
 * * * * *
 
- 3. Problem with Old SDLC
-===========================
+#  3. Problem with Old SDLC
+
 
 **Concept (Short):**\
 Everything was slow, manual, and teams worked separately.
@@ -51,8 +51,8 @@ deployment fails → bug found late → delay
 
 * * * * *
 
- 4. What is DevOps
-===================
+#  4. What is DevOps
+
 
 **Concept (Short):**\
 DevOps is a way of working where building and running software happens together, faster and smarter.
@@ -61,23 +61,23 @@ DevOps is a way of working where building and running software happens together,
 
 **Real Example:**\
 You push code → system automatically:\
-✔ tests it\
-✔ deploys it\
-✔ checks if it works
+- tests it\
+- deploys it\
+- checks if it works
 
  No waiting, no last-minute surprises
 
 * * * * *
 
- 5. DevOps in One Line
-========================
+#  5. DevOps in One Line
+
 
  "Build it + Test it + Deploy it + Monitor it --- continuously"
 
 * * * * *
 
- 6. DevOps Flow (Simple Loop)
-===============================
+#  6. DevOps Flow (Simple Loop)
+
 
 ```
 Code → Test → Deploy → Monitor → Fix → Repeat
@@ -92,8 +92,8 @@ You add feature → users use → issue found → fix → update again
 
 * * * * *
 
- 7. What is Cloud
-===================
+#  7. What is Cloud
+
 
 **Concept (Short):**\
 Cloud means using someone else's computer (server) over the internet instead of your own.
@@ -107,8 +107,8 @@ Instead of storing photos on your laptop → you use Google Drive
 
 * * * * *
 
- 8. Why Cloud is Needed
-=========================
+#  8. Why Cloud is Needed
+
 
 **Concept (Short):**\
 Cloud removes the need to manage physical machines.
@@ -129,8 +129,8 @@ With Cloud:
 
 * * * * *
 
- 9. DevOps + Cloud Together
-=============================
+ # 9. DevOps + Cloud Together
+
 
 **Concept (Short):**\
 DevOps needs speed and automation --- Cloud makes it possible.
@@ -146,8 +146,8 @@ App is deployed in minutes
 
 * * * * *
 
- 10. Full Picture (Simple Story)
-==================================
+ # 10. Full Picture (Simple Story)
+
 
 You build an app:
 
@@ -158,7 +158,7 @@ You build an app:
 * * * * *
 
  Final Understanding (Crystal Clear)
-======================================
+
 
 -   **SDLC** = How to build software
 -   **DevOps** = How to build & deliver it faster
@@ -167,6 +167,6 @@ You build an app:
 * * * * *
 
  One-Line Memory Trick
-========================
+
 
  "SDLC is the plan, DevOps is the engine, Cloud is the road"
