@@ -203,9 +203,13 @@ Normal Disk:Fixed → Hard to changeLVM:Flexible → Easy to resize
 
 * * * * *
 
-One-line memory trick
+ memory trick
 ========================
 
 - **LVM = Flexible disk management system**
 
 Hardware → Storage → LVM → OS uses it
+
+- LVM = Logical Volume Manager
+- Allows resizing disks without downtime
+- Used when storage needs to scale
