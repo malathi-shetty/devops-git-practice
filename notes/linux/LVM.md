@@ -12,13 +12,13 @@ You divide it like this:
 
 Everything is fine... until 
 
-- C drive becomes FULL\
+- C drive becomes FULL
 - D drive is still EMPTY
 
-Now you want:\
+Now you want:
 - "Give some space from D to C"
 
-- But normal partitions don't allow this easily\
+- But normal partitions don't allow this easily
 You may need:
 
 -   Backup data
@@ -50,14 +50,14 @@ You have:
 -   2 separate buckets
 -   Each bucket fixed size
 
-If one fills:\
+If one fills:
 - You can't easily use space from another
 
 * * * * *
 
 ###  With LVM
 
-You create:\
+You create:
 - One BIG water tank 
 
 Now:
@@ -89,7 +89,7 @@ Examples:
 -   SSD
 -   Partitions
 
-- Think:\
+- Think:
 "Raw storage pieces"
 
 * * * * *
@@ -105,7 +105,7 @@ Example:
 Disk1 (50GB) + Disk2 (50GB) = 100GB pool
 ```
 
-- Think:\
+- Think:
 "Big storage tank"
 
 * * * * *
@@ -121,7 +121,7 @@ Example:
 LV1 → 30GB  LV2 → 40GB
 ```
 
-- Think:\
+- Think:
 "Flexible partitions"
 
 * * * * *
@@ -163,7 +163,7 @@ No need to recreate partitions
 
 - Take backup at a point in time
 
-Like:\
+Like:
 "Photo of your data"
 
 * * * * *
@@ -180,16 +180,16 @@ Real DevOps Example
 
 Imagine:
 
-- Your application is running on server\
+- Your application is running on server
 - Suddenly disk is full
 
-Without LVM:\
-- App crash\
+Without LVM:
+- App crash
 - Downtime
 
-With LVM:\
-- Add new disk\
-- Extend volume\
+With LVM:
+- Add new disk
+- Extend volume
 - App keeps running
 
 * * * * *
